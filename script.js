@@ -1,14 +1,14 @@
-console.log("hello word")
+console.log("hello word");
 
 //. добавляем кнопку: "Изменить цвет первой карточки"
 
 const recolorFirstCardButton = document.getElementById('recolor-first-card-button');
 const firstCardContainer = document.querySelector('.card-container');
-const bruzHashColor ='#bcdee9'
+const bruzHashColor ='#bcdee9';
 
 recolorFirstCardButton.addEventListener ('click', () => {
   firstCardContainer.style.backgroundColor = bruzHashColor;
-})
+});
 
 
 //. добавляем кнопку: "изменить цвет всех карточек"
@@ -19,28 +19,21 @@ const recolorAllCardButton = document.getElementById('recolor-all-card-button');
 const cardContainer = document.querySelectorAll('.card-container');
 recolorAllCardButton.addEventListener('click', () => {
   cardContainer.forEach(
-    card => card.style.backgroundColor = greyHashColor
-  )
-})
+    card => card.style.backgroundColor = greyHashColor); 
+});
 
 
 //. добавляем кнопку: "Покрась меня"
 
 document.addEventListener('DOMContentLoaded', function ()
 {
-const colorMeButton = document.getElementById('color-me-button');
-  if (colorMeButton) {
+  const colorMeButton = document.getElementById('color-me-button');
+    if (colorMeButton) {
 colorMeButton.addEventListener ('click', function () {
   this.classList.toggle('active-color');
-});
-
-colorMeButton.addEventListener ('mouseover', function () {
-  this.classList.add('hover-color');
-});
-colorMeButton.addEventListener ('mouseout', function () {
-  this.classList.remove('hover-color');
-  });
-  }
+    console.log('Статус переключен!');
+    });
+  };
 });
 
 
@@ -54,15 +47,15 @@ function openGoogle() {
   if (answer === true) {
     window.open('https://google.com');
   } else {
-    console.log('Пользователь отменил действие')
-  }
-}
+    console.log('Пользователь отменил действие');
+  };
+};
 
 
 //. выводим текст в консоль
 
 const mainHeading = document.querySelector('.product-selection-title');
 mainHeading.addEventListener('mouseenter', (event) => {
-  console.log(event.target.textContent);
-})
+  console.log(mainHeading.textContent);
+});
 

@@ -19,17 +19,17 @@ const recolorAllCardButton = document.getElementById('recolor-all-card-button');
 const cardContainer = document.querySelectorAll('.card-container');
 recolorAllCardButton.addEventListener('click', () => {
   cardContainer.forEach(
-    card => card.style.backgroundColor = greyHashColor); 
+    card => card.style.backgroundColor = greyHashColor
+  );
 });
 
 
 //. добавляем кнопку: "Покрась меня"
 
-document.addEventListener('DOMContentLoaded', function ()
-{
-  const colorMeButton = document.getElementById('color-me-button');
-    if (colorMeButton) {
-colorMeButton.addEventListener ('click', function () {
+document.addEventListener('DOMContentLoaded', function() {
+const colorMeButton = document.getElementById('color-me-button');
+  if (colorMeButton) {
+colorMeButton.addEventListener ('click', function() {
   this.classList.toggle('active-color');
     console.log('Статус переключен!');
     });

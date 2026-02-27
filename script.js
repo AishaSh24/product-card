@@ -27,11 +27,11 @@ recolorAllCardButton.addEventListener('click', () => {
 //. добавляем кнопку: "Покрась меня"
 
 document.addEventListener('DOMContentLoaded', function() {
-const colorMeButton = document.getElementById('color-me-button');
+  const colorMeButton = document.getElementById('color-me-button');
   if (colorMeButton) {
-colorMeButton.addEventListener ('click', function() {
-  this.classList.toggle('active-color');
-    console.log('Статус переключен!');
+    colorMeButton.addEventListener ('click', function() {
+this.classList.toggle('active-color');
+      console.log('Статус переключен!');
     });
   };
 });

@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const colorMeButton = document.getElementById('color-me-button');
   if (colorMeButton) {
     colorMeButton.addEventListener ('click', function() {
-this.classList.toggle('active-color');
-    console.log('Статус переключен!');
+      this.classList.toggle('active-color');
+      console.log('Статус переключен!');
     });
-  };
+  }
 });
 
 

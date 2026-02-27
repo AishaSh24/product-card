@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (colorMeButton) {
     colorMeButton.addEventListener ('click', function() {
 this.classList.toggle('active-color');
-      console.log('Статус переключен!');
+    console.log('Статус переключен!');
     });
   };
 });

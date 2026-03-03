@@ -12,9 +12,15 @@
 <body>
   <div class="all-elements">
     <div class="background-dandelions"></div>
-      <h1 class="product-selection-title">Выбери свой продукт</h1>
+      <h1 id="product-title" class="product-selection-title">Выбери свой продукт</h1>
+      <div class="buttons">
+        <button id="recolor-first-card-button" class="btn">Перекрасить фон первой карточки</button>
+        <button id="recolor-all-card-button" class="btn">Перекрасить фон всех карточек</button>
+        <button id="color-me-button" class="btn">Покрась меня</button>
+        <button id="open-google-button" class="btn">Открыть Google</button>
+      </div>
         <div class="product-row">
-          <div class="card-container">
+          <div id="card1" class="card-container">
             <img src="/images/moisturizing-mousse.png" alt="Увлажняющий мусс" width="290px" height="245px">
             <span class="product-category">для нормальной кожи</span>
             <h3 class="product-name">Увлажняющий мусс</h3>
@@ -97,5 +103,6 @@
         </div>
     </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>

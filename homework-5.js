@@ -10,11 +10,11 @@ showWeather('Мекка, 35');
 showWeather('Дамаск', 20);
 
 
-//Создаем фукнцию, которая хранит внутр  себя скорость света
+//Создаем фукнцию, которая хранит внутри себя скорость света
 
 const LIGHT_SPEED = 299792458;
 
-function checkSpeed(speed) {
+function compareSpeed(speed) {
   if (speed > LIGHT_SPEED) {
     console.log('Сверхсветовая скорость');
   } else if (speed < LIGHT_SPEED) {
@@ -24,9 +24,10 @@ function checkSpeed(speed) {
   }
 }
 
-checkSpeed(300000000);
-checkSpeed(20500);
-checkSpeed(299792458);
+compareSpeed(300000000);
+compareSpeed(20500);
+compareSpeed(299792458);
+
 
 //Создаем переменную для магазина
 
@@ -36,8 +37,7 @@ let productPrice = 125;
 function buyProduct(myBudget) {
   if (myBudget >= productPrice) {
     console.log('{Мобильный телефон} товар приобретен: Спасибо за покупку!');
-  }
-  else {
+  } else {
     let debt = productPrice - myBudget;
     console.log('Вам не хватает 125$, пополните счет на карте');
   }
@@ -45,3 +45,20 @@ function buyProduct(myBudget) {
 
 buyProduct(185);
 buyProduct(65);
+
+
+//Для улучшения аналитичеких способностей создаем функцию и три переменных
+
+let myName = 'Айша';
+let myAge = '40 лет';
+let iAmFromIsSibiria = 'true';
+
+function showMyInfo() {
+  console.log('Мое имя: Айша');
+  console.log('Возраст: 40 лет');
+  console.log('Откуда родом: Сибирь');
+}
+
+showMyInfo();
+
+

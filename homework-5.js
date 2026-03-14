@@ -2,11 +2,11 @@
 //Указываем город и температуру по Цельсию
 
 function showWeather(city, temp) {
-  console.log('сейчас в городе{Мекка} температура - {35} градусов по Цельсию');
-  console.log('сейчас в городе{Дамаск} температура - {20} градусов по Цельсию');
+  console.log(`сейчас в городе ${city} температура - ${temp} градусов по Цельсию`);
+  console.log(`сейчас в городе ${city} температура - ${temp} градусов по Цельсию`);
 }
 
-showWeather('Мекка, 35');
+showWeather('Мекка', 35);
 showWeather('Дамаск', 20);
 
 
@@ -31,8 +31,8 @@ compareSpeed(299792458);
 
 //Создаем переменную для магазина
 
-let productName = 'Мобильный телефон'
-let productPrice = 125;
+const productName = 'Мобильный телефон'
+const productPrice = 125;
 
 function buyProduct(myBudget) {
   if (myBudget >= productPrice) {
@@ -49,13 +49,13 @@ buyProduct(65);
 
 //Для улучшения аналитичеких способностей создаем функцию и три переменных
 
-let myName = 'Айша';
-let myAge = '40 лет';
-let iAmFromIsSibiria = 'true';
+const myName = 'Айша';
+const myAge = 40;
+const iAmFromIsSibiria = true;
 
 function showMyInfo() {
   console.log('Мое имя: Айша');
-  console.log('Возраст: 40 лет');
+  console.log('Возраст: 40');
   console.log('Откуда родом: Сибирь');
 }
 

@@ -42,37 +42,62 @@ addMaxSpeed(myCar);
 
 //4. Пишем функцию, которая выводит свойства аргумента и его значение
 
-function getInfo(obj, key) {
+function showObjectInfo(obj, key) {
   console.log(obj[key]);
 }
 
-getInfo(myCar, 'brand');
-getInfo(myCar, 'color');
+showObjectInfo(myCar, 'brand');
+showObjectInfo(myCar, 'color');
 
 
 //5. Список продуктов (массив)
 
-const product = ['словарь ар-рус языка', 'тетрадь общая 98л', 'пенал д/девочки', 'ручки гелевые цв', 'карандаши цв'];
+const product = [
+  'словарь ар-рус языка',
+  'тетрадь общая 98л',
+  'пенал д/девочки',
+  'ручки гелевые цв',
+  'карандаши цв'
+];
 
 function getInfo(obj, key) {
-console.log(obj[key]);
+  console.log(obj[key]);
 }
 
 
 //6. Cоздаем массив из объектов-книг
 
 const myLibrary = [
-  { title: 'Белый клык', author: 'Джек Лондон', year: 1906, coverColor: 'Коричневый', genre: 'Приключения' },
-  { title: 'Обитетали холмов', author: 'Ричард Адамс', year: 1972, coverColor: 'Зеленая', genre: 'Фантастика' },
-  { title: 'Всадник без головы', author: 'Томас Майн Рид', year: 1865, coverColor: 'Синяя', genre: 'Роман' },
-]
+  {
+    title: 'Белый клык',
+    author: 'Джек Лондон',
+    year: 1906,
+    coverColor: 'Коричневый',
+    genre: 'Приключения'
+  },
+  {
+    title: 'Обитетали холмов',
+    author: 'Ричард Адамс',
+    year: 1972,
+    coverColor: 'Зеленая',
+    genre: 'Фантастика'
+  },
+  {
+    title: 'Всадник без головы',
+    author: 'Томас Майн Рид',
+    year: 1865,
+    coverColor: 'Синяя',
+    genre: 'Роман'
+  },
+];
+
 myLibrary.push({
   title: 'Война и мир',
   author: 'Лев Толсттой',
   year: 1873 ,
   coverColor: 'Зеленая',
   genre: 'Роман-эпопея'
-})
+});
 
 console.log(myLibrary)
 
@@ -80,12 +105,42 @@ console.log(myLibrary)
 //7. Создаем массив из книг одной серии
 
 const carolineKeenBooks = [
-  { title: 'Тайна старой часовни', author: 'Каролина Кин', year: 1930, coverColor: 'Темно-красный', genre: 'Детектив' },
-  { title: 'Тайна скрытой лестницы', author: 'Каролина Кин', year: 1930, coverColor: 'Бирюзовый', genre: 'Детектив' },
-  { title: 'Тайна пустой рамы', author: 'Каролина Кин', year: 1930, coverColor: 'Светло-зеленый', genre: 'Детектив' },
-  { title: 'Тайна серебрянного креста', author: 'Каролина Кин', year: 1930, coverColor: 'Розово-фиолетовый', genre: 'Детектив' },
-  { title: 'Тайна железного ящичка', author: 'Каролина Кин', year: 1931, coverColor: 'Золотисто-коричневый', genre: 'Детектив' },
-]
+  {
+    title: 'Тайна старой часовни',
+    author: 'Каролина Кин',
+    year: 1930,
+    coverColor: 'Темно-красный',
+    genre: 'Детектив'
+  },
+  {
+    title: 'Тайна скрытой лестницы',
+    author: 'Каролина Кин',
+    year: 1930,
+    coverColor: 'Бирюзовый',
+    genre: 'Детектив'
+  },
+  {
+    title: 'Тайна пустой рамы',
+    author: 'Каролина Кин',
+    year: 1930,
+    coverColor: 'Светло-зеленый',
+    genre: 'Детектив'
+  },
+  {
+    title: 'Тайна серебрянного креста',
+    author: 'Каролина Кин',
+    year: 1930,
+    coverColor: 'Розово-фиолетовый',
+    genre: 'Детектив'
+  },
+  {
+    title: 'Тайна железного ящичка',
+    author: 'Каролина Кин',
+    year: 1931,
+    coverColor: 'Золотисто-коричневый',
+    genre: 'Детектив'
+  },
+];
 
 const allBooks = [...myLibrary, ...carolineKeenBooks];
 
@@ -93,22 +148,21 @@ const allBooks = [...myLibrary, ...carolineKeenBooks];
 //8. Создаем функцию, принимающую массив сущностей с предыдущего задания
 
 function addRareStatus(allBooksArray) {
-  const updateBooks = allBooksArray.map((book) => {
-    const newBook = {
+  const getUpdateBooks = (allBooksArray) =>{
+
+  }
+  return allBooksArray.map(book => ({
       ...book,
       isRare: book.year < 1950
-    };
-    return newBook;
-  });
-  return updateBooks;
-}
+  }));
+};
 
 const finalLibrary = addRareStatus(allBooks);
 console.log(finalLibrary)
 
 
 
-//6. Проверить как это работает
+//9. Проверить как это работает
 
 getInfo(myProfile, 'firstName');
 getInfo(myCar, 'brand');

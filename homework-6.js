@@ -60,10 +60,6 @@ const product = [
   'карандаши цв'
 ];
 
-function getInfo(obj, key) {
-  console.log(obj[key]);
-}
-
 
 //6. Cоздаем массив из объектов-книг
 
@@ -148,24 +144,12 @@ const allBooks = [...myLibrary, ...carolineKeenBooks];
 //8. Создаем функцию, принимающую массив сущностей с предыдущего задания
 
 function addRareStatus(allBooksArray) {
-  const getUpdateBooks = (allBooksArray) =>{
-
-  }
   return allBooksArray.map(book => ({
-      ...book,
-      isRare: book.year < 1950
+    ...book,
+    isRare: book.year < 1950 ,
   }));
 };
 
 const finalLibrary = addRareStatus(allBooks);
 console.log(finalLibrary)
-
-
-
-//9. Проверить как это работает
-
-getInfo(myProfile, 'firstName');
-getInfo(myCar, 'brand');
-getInfo(product, 0);
-
 

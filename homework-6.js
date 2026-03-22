@@ -143,13 +143,13 @@ const allBooks = [...myLibrary, ...carolineKeenBooks];
 
 //8. Создаем функцию, принимающую массив сущностей с предыдущего задания
 
-function addRareStatus(allBooksArray) {
+function getRareBooks(allBooksArray) {
   return allBooksArray.map(book => ({
     ...book,
     isRare: book.year < 1950 ,
   }));
 };
 
-const finalLibrary = addRareStatus(allBooks);
+const finalLibrary = getRareBooks(allBooks);
 console.log(finalLibrary)
 

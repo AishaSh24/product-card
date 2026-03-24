@@ -23,18 +23,18 @@ console.log(hasMath);
 
 //3. Пишем функцию, которая будет применять массив и изменять его порядок напротивоположный
 
-function reverseMyData(anyArray) {
-  return anyArray.reverse();
+function reverseArray(array) {
+  return array.reverse();
 }
 
 // Используем ее для 1го задания
 
-const reversedNumbers = reverseMyData(filteredNumbers);
+const reversedNumbers = reverseArray(filteredNumbers);
 console.log(reversedNumbers);
 
 // Используем ее для 2го задания
 
-const reversedSubject = reverseMyData(educationalSubjects);
+const reversedSubject = reverseArray(educationalSubjects);
 console.log(reversedSubject);
 
 
@@ -83,12 +83,12 @@ console.log(validatedComments);
 
 // используем map
 
-const emailsMap = comments.map(item => item.email);
+const emailByMap = comments.map(item => item.email);
 
 
 // используем reduce
 
-const emailReduce = comments.reduce((acc, item) => {
+const emailByReduce = comments.reduce((acc, item) => {
   acc.push(item.email);
   return acc;
 }, []);
@@ -96,7 +96,7 @@ const emailReduce = comments.reduce((acc, item) => {
 
 //2. Используем toString(), join()
 
-const string1 = emailsMap.toString();
+const string1 = emailByMap.toString();
 
-const string2 = emailsMap.join(', ');
+const string2 = emailByMap.join(', ');
 

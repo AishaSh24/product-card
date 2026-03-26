@@ -34,8 +34,8 @@ console.log(reversedNumbers);
 
 // Используем ее для 2го задания
 
-const reversedSubject = reverseArray(educationalSubjects);
-console.log(reversedSubject);
+const reversedSubjects = reverseArray(educationalSubjects);
+console.log(reversedSubjects);
 
 
 
@@ -83,7 +83,7 @@ console.log(validatedComments);
 
 // используем map
 
-const emailByMap = comments.map(item => item.email);
+const emailsByMap = comments.map(item => item.email);
 
 
 // используем reduce
@@ -96,7 +96,7 @@ const emailByReduce = comments.reduce((acc, item) => {
 
 //2. Используем toString(), join()
 
-const string1 = emailByMap.toString();
+const string1 = emailsByMap.toString();
 
-const string2 = emailByMap.join(', ');
+const string2 = emailsByMap.join(', ');
 

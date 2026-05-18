@@ -102,6 +102,7 @@
   height: 1191px;
   z-index: 2;
   position: relative;
+  overflow: auto;
 }
 
 .card-container {
@@ -184,6 +185,7 @@
   gap:7px;
   background-color: #3A3A3A;
   padding: 86px 0 28px 84px;
+  z-index: 2;
 }
 
 .footer_title {

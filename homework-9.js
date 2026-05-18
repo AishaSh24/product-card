@@ -9,6 +9,7 @@ emailFrom.addEventListener('submit', function(event) {
   const data = Object.fromEntries(fromData.entries());
   console.log(data);
 })
+//console.log('Ты подписан!')
 
 
 // Задание №5. Создаем кнопку регистрации
@@ -51,7 +52,7 @@ userForm.addEventListener('submit', (event) => {
   const fromData = {
     name: userForm.name.value,
     surname: userForm.surname.value,
-    'data-of-birth': userForm['data-of-birth'].value,
+    'date-of-birth': userForm['date-of-birth'].value,
     login: userForm.login.value,
     password: userForm.password.value,
     createdOn: new Date()

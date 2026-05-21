@@ -18,6 +18,7 @@
         <button id="recolor-all-card-button" class="btn">Перекрасить фон всех карточек</button>
         <button id="color-me-button" class="btn">Покрась меня</button>
         <button id="open-google-button" class="btn">Открыть Google</button>
+        <button id="open-modal-btn" class="btn">Зарегистрироваться</button>
       </div>
         <div class="product-row"></div>
           <template id="product-template">
@@ -35,11 +36,75 @@
             </div>
           </template>
     </div>
+    <footer class="footer">
+      <h4 class="footer-title">Product Cards</h4>
+      <p class="footer_discription">У Нас Самые Лучшие Продукты Для Кожи!</p>
+      <ul class="footer_social-networks">
+        <li class="footer_social-networks_telegram"><a class="footer_social-link" href="#" target="_blank">
+          <img class="footer_social-icon" src="./images/Vector-tg.svg" alt="Telegram"
+        </a></li>
+        <li class="footer_social-networks_vk"><a class="footer_social-link" href="#" target="_blank">
+          <img class="footer_social-icon" src="./images/Vector-vk.svg" alt="VK">
+        </a></li>
+      </ul>
+      <form class="footer_from" id="email-from">
+        <label class="footer_from_discription">Подпишись на наши акции:</label>
+        <div class="footer_from_field">
+          <input class="footer_from_input" name="email" type="email" placeholder="Введи email..." required autocomplete="email">
+          <button type="submit">Подписаться</button>
+        </div>
+      </form>
+      <img class="footer_line" src="./images/Line 17.svg" alt="VK">
+      <p class="footer_adress">www.product-cards.com©all right reserve </p>
+      <nav class="footer_menu">
+        <ul class="footer_menu-list">
+          <li class="footer_menu-list_title">Быстрые ссылки</li>
+          <li class="footer_menu-list_item"><a href="#">Главная</a></li>
+          <li class="footer_menu-list_item"><a href="#">Магазин</a></li>
+          <li class="footer_menu-list_item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <div class="modal" id="modal-window">
+      <div class="modal-content">
+        <button class="close-modal" id="close-modal-btn">&times</button>
+        <form class="modal-from" id="registrationForm">
+          <ul class="modal-list">
+            <li class="modal-list_item">
+              <label for="name">Имя:</label>
+              <input type="text" name="name" id="name" required placeholder="Анна">
+            </li>
+            <li class="modal-list_item">
+              <label for="surname">Фамилия:</label>
+              <input type="text" name="surname" id="surname" required placeholder="Черемнова">
+            </li>
+            <li class="modal-list_item">
+              <label for="date-of-birth">Дата рождения:</label>
+              <input type="date" name="date-of-birth" id="date-of-birth" required value="1985-14-10">
+            </li>
+            <li class="modal-list_item">
+              <label for="login">Логин:</label>
+              <input type="text" name="login" id="login" required placeholder="******">
+            </li>
+            <li class="modal-list_item">
+              <label for="password">Пароль:</label>
+              <input type="password" name="password" id="password" required placeholder="********" minlength="6">
+            </li>
+            <li class="modal-list_item">
+              <label for="confirm-password">Повторение пароля:</label>
+              <input type="confirm-password" name="confirm-password" id="confirm-password" required placeholder="********">
+            </li>
+          </ul>
+          <button class="get-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </div>
   <script src="./script.js"></script>
   <script src="./homework-5.js"></script>
   <script src="./homework-6.js"></script>
   <script type="module" src="./homework-7.js"></script>
   <script type="module" src="./homework-8.js"></script>
+  <script type="module" src="./homework-9.js"></script>
 </body>
 </html>

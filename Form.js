@@ -32,12 +32,12 @@ export class Form {
     return fromData;
   }
   isValid() {
-    if (this.formElement) return false;
+    if (!formElement) return false;
     return this.formElement.checkValidity();
   }
   reset() {
     if (this.formElement) {
-      this.formElement.resert();
+      this.formElement.reset();
     }
   }
 }

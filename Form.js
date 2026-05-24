@@ -11,7 +11,7 @@ export class Form {
     }
 
     const fromData = {};
-    const formElement = this.formElement.querySelectorAll('input[name], textarea[name], select[name]');
+    const formElements = this.formElement.querySelectorAll('input[name], textarea[name], select[name]');
 
     formElements.forEach(element => {
       const name = element.name;
@@ -32,7 +32,7 @@ export class Form {
     return fromData;
   }
   isValid() {
-    if (!formElement) return false;
+    if (!this.formElement) return false;
     return this.formElement.checkValidity();
   }
   reset() {

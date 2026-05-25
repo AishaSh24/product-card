@@ -1,69 +1,88 @@
+import {Modal} from "./Modal.js";
+import {Form} from "./Form.js";
+
 // Задание №4. email: 'введенная почта'
 
-const emailFrom = document.getElementById('email-from');
+const emailFromInstance = new Form('email-from');
+const htmlEmailFrom = emailFromInstance.formElement;
+if (htmlEmailFrom) {
+  htmlEmailFrom.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    if (emailFromInstance.isValid()) {
+      const data = emailFromInstance.getValues();
+      console.log('Данные подписки:', data);
+      alert(`Ты подписан на рассылку с почтой: ${data.email || 'Неизвестно'}`);
+      emailFromInstance.resert();
+    } else {
+      alert('Пожалуйста, введите коректный email для подписки.');
+    }
+  });
+} else {
+  console.error('HTML-элемент формы (ID "email-from") подписки не найден.');
+}
+console.log('Ты подписан!');
 
-emailFrom.addEventListener('submit', function(event) {
-  event.preventDefault();
-  const from = event.target;
-  const fromData = new fromData(from);
-  const data = Object.fromEntries(fromData.entries());
-  console.log(data);
-})
 //console.log('Ты подписан!')
 
 
 // Задание №5. Создаем кнопку регистрации
 
-const registrationBtn = document.getElementById('open-modal-btn');
-const registrationModal = document.getElementById('modal-window');
-const closeBtn = document.getElementById('close-modal-btn');
-
-function openModal() {
-  registrationModal.classList.add('modal-showed');
+const openModalBtnInstance = new Modal('modal-window');
+const openModalBtn = document.getElementById('open-modal-btn');
+if (openModalBtn) {
+  openModalBtn.addEventListener('click', () => {
+    openModalBtnInstance.open();
+  });
+} else {
+  console.error('Кнопка открытия модального окна (ID "open-modal-btn") не найдена.');
 }
-
-registrationBtn.addEventListener('click', openModal);
-
-function closeModal() {
-  registrationModal.classList.remove('modal-showed');
-}
-
-closeBtn.addEventListener('click', closeModal);
 
 
 // Задание №6. Добавляем модальное окно с полями:Ф.И., почта
 
 let user = null;
 
-const userForm = document.getElementById('registrationForm');
+const registrationFormInstance = new Form('registrationForm');
+const htmlRegistrationForm = registrationFormInstance.formElement;
 
-userForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+if (htmlRegistrationForm) {
+  htmlRegistrationForm.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-  const password = userForm.password.value;
-  const confirmPassword = userForm['confirm-password'].value;
-  const passwordsMatch = (password === confirmPassword);
-  const isFormValid = userForm.checkValidity();
-    if (!isFormValid || !passwordsMatch) {
-      alert('Не правильный ввод! Исправь!');
+    const formData = registrationFormInstance.getValues();
+
+    const isBrowserValid = registrationFormInstance.isValid();
+
+    const password = formData.password;
+    const confirmPassword = formData['confirm-password'];
+    const passwordsMatch = (password === confirmPassword);
+
+    if (!isBrowserValid || !passwordsMatch) {
+      alert('Неправильный ввод! Пожалуйста, убедитесь, что пароли совпадают!');
       return;
     }
 
-  const fromData = {
-    name: userForm.name.value,
-    surname: userForm.surname.value,
-    'date-of-birth': userForm['date-of-birth'].value,
-    login: userForm.login.value,
-    password: userForm.password.value,
-    createdOn: new Date()
-  };
+    formData.createdOn = new Date();
 
-  user = fromData;
+    user = formData;
 
-  console.log('Твои данные:', user);
-  alert('Ты зарегистрирован! Вся информация о тебе в консоли.');
+    console.log('Твои данные:', user);
+    alert('Ты зарегистрирован! Вся информация о тебе в консоли.');
 
-  closeModal();
+    openModalBtnInstance.close();
+    registrationFormInstance.reset();
+  });
+} else {
+  console.error('HTML-элемент формы регистрации (ID "registrationForm") не найден.');
+}
 
-});
+const resetGetBtn = document.getElementById('resetGetBtn');
+if (resetGetBtn) {
+  resetGetBtn.addEventListener('click', () => {
+    registrationFormInstance.reset();
+    console.log('Форма регистрации сброшена.');
+  });
+}
 
+  

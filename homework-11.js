@@ -31,6 +31,7 @@ setTemperature(newTemp) {
   if (typeof newTemp !== 'number' || newTemp < 10 || newTemp > 80) {
     throw new Error('Некорректная температура: ${newTemp}');
   }
+  this.#temperature = newTemp;
 }
 
   #prepare() {

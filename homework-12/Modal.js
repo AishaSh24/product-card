@@ -4,6 +4,10 @@ export class Modal {
     this.overlay = document.getElementById('overlay');
     this.shouldCloseOnOverlay = shouldCloseOnOverlay;
     this.closeBtn = this.modal?.querySelector('.modal-close-button');
+    
+    if (this.closeBtn) {
+      this.closeBtn.removeEventListener('click', this.close);
+    }
 
     this.#initOpen(buttonId);
   }
@@ -25,10 +29,6 @@ export class Modal {
   }
   #removeListeners() {
     this.overlay.removeEventListener('click', this.close);
-
-    if (this.closeBtn) {
-      this.closeBtn.removeEventListener('click', this.close);
-    }
   }
 
   #initOpen(buttonId) {

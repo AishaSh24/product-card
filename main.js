@@ -7,7 +7,7 @@ import "./homework-9.js";
 import {Modal} from "./Modal.js";
 import "./Form.js";
 import "./homework-11.js";
-
+import { Form } from "./Form.js";
 
 
 // Задание №3. Создание структуры

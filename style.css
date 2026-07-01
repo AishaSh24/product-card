@@ -462,3 +462,20 @@
   color: #171717;
   margin-left: auto;
 }
+
+.button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 15px 30px;
+  background-color: #4fb2b6;
+  color: rgb(18, 17, 17);
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.button-link:hover {
+  background-color: #06b2ad;
+}

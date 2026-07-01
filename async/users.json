@@ -1,0 +1,43 @@
+{
+  "users":[
+    {
+      "id":1,
+      "name": "Иван",
+      "surname": "Иванов",
+      "email": "ivaniva@gmail.com",
+      "age": "32"
+    },
+
+    {
+      "id":2, 
+      "name": "Анна", 
+      "surname": "Петрова", 
+      "email": "annapetr@gmail.com", 
+      "age": "39"
+    },
+
+    {
+      "id":3, 
+      "name": "Артем", 
+      "surname": "Сидоров", 
+      "email": "artemsid@gmail.com", 
+      "age": "42"
+    },
+
+    {
+      "id":4, 
+      "name": "Максим", 
+      "surname": "Сидиков", 
+      "email": "maxsid@gmail.com", 
+      "age": "45"
+    },
+
+    {
+      "id":5, 
+      "name": "Виталий", 
+      "surname": "Велижанин", 
+      "email": "velejanvit@gmail.com", 
+      "age": "52"
+    }
+  ]
+}

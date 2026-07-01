@@ -1,0 +1,122 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#app-container {
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  min-height: 150px;
+}
+
+.user-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #ecf0f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  width: 200px;
+  position: relative;
+}
+
+.user-card h3 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+.user-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.delete-card-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-card-btn:hover {
+  background-color: #c0392b;
+}
+
+.message {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: sans-serif, Arial, Helvetica;
+  font-weight: bold;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+}
